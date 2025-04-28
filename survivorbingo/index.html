@@ -87,6 +87,7 @@
   </style>
 </head>
 <body>
+  <center>
   <h1>Survivor Bingo</h1>
   <div id="seed-display"></div>
   <div id="bingo"></div>
@@ -96,11 +97,18 @@
     <button id="shareBtn">Get Board Link</button>
     <button id="savePdfBtn">Print</button>
   </div>
-  <div style="margin-top:1rem;">
+  <div>
     <input type="number" id="seedInput" placeholder="Enter board #">
     <button id="loadSeedBtn">Load Board</button>
   </div>
+  
 
+  <div style="margin-top:1rem;">
+    <p><a href="https://www.counciloftitos.com" target="_blank" style="color: rgb(0, 0, 0); font-size: 12px;">Council of Titos</a></p>
+
+
+</center>
+  
   <script>
 const phrases = [
   "Hidden Immunity Idol found", "Hidden Idol clue found", "Secret Advantage found", 
@@ -233,6 +241,8 @@ function loadCustomSeed() {
     alert("Please enter a valid number for the board.");
   }
 }
+
+
 
 resetBtn.addEventListener("click", resetBoard);
 shareBtn.addEventListener("click", createShareLink);
