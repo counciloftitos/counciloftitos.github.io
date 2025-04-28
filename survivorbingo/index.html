@@ -97,8 +97,8 @@
     <button id="savePdfBtn">Print</button>
   </div>
   <div style="margin-top:1rem;">
-    <input type="number" id="seedInput" placeholder="Enter seed">
-    <button id="loadSeedBtn">Load Seed</button>
+    <input type="number" id="seedInput" placeholder="Enter board #">
+    <button id="loadSeedBtn">Load Board</button>
   </div>
 
   <script>
@@ -176,7 +176,7 @@ function generateBoard(seed) {
   const url = new URL(window.location.href);
   url.searchParams.set("seed", seed);
   history.replaceState(null, null, url.toString());
-  seedDisplay.textContent = "Seed: " + currentSeed;
+  seedDisplay.textContent = "Board: " + currentSeed;
 
   let shuffled = shuffleWithSeed(phrases, currentSeed);
   let tiles = shuffled.slice(0, 24);
@@ -230,7 +230,7 @@ function loadCustomSeed() {
   if (!isNaN(seed)) {
     generateBoard(seed);
   } else {
-    alert("Please enter a valid number for the seed.");
+    alert("Please enter a valid number for the board.");
   }
 }
 
