@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Survivor Bingo (Single Episode)</title>
+  <title>Survivor Bingo</title>
   <style>
     body {
       font-family: 'Trebuchet MS', sans-serif;
-      background: url('https://pix4free.org/assets/library/2020-12-13/originals/beach036.jpg') no-repeat center center fixed;
+      background: url('https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg') no-repeat center center fixed;
       background-size: cover;
       margin: 0;
       padding: 2rem;
@@ -96,7 +96,7 @@
 </head>
 <body>
   <center>
-  <h1>Survivor Bingo (Single Episode)</h1>
+  <h1>Survivor Bingo</h1>
   <div id="seed-display"></div>
   <div id="bingo"></div>
   <div id="bingo-message"></div>
@@ -118,93 +118,60 @@
 </center>
   
   <script>
-
-
 const phrases = [
-"'Live Tribal' chaos",
-"A crab or animal steals food at camp",
-"A player breaks down after losing a challenge",
-"A player gets a 'game-changing' advantage at the last minute",
-"A player has a meltdown over camp life",
-"A player reveals their 'game-changing' plan that falls apart immediately",
-"A quiet player has a major confession in a confessional",
-"A reward challenge has food and someone drools",
-"Alliance member flips",
-"Campfire conversation gets awkward",
-"Challenge ends in a very close finish",
-"Challenge involves balancing something",
-"Confessional where someone trashes another player",
-"Emotional backstory",
-"Extra vote is used",
-"Fake idol is played",
-"Flirting attempt fails",
-"Hidden Immunity Idol found",
-"Idol bluff works",
-"Idol is played correctly",
-"Jeff gives a weirdly specific compliment",
-"Jeff roasts someone at Tribal",
-"Jeff says 'Come on in!'",
-"Jeff shouts 'That’s how you do it on Survivor!'",
-"Jeff makes a joke about balls",
-"Last-minute scramble before Tribal",
-"Medical team is called to the challenge",
-"Player dramatically walks off after being voted out",
-"Player imitates another player",
-"Player lies straight to someone’s face",
-"Players hug after a vote-off",
-"Players scramble to form alliances last minute",
-"Shot in the Dark is used",
-"Someone brags about their strategy but gets called out on it",
-"Someone builds something impressive at camp",
-"Someone calls another player a 'snake'",
-"Someone calls themselves a 'lone wolf'",
-"Someone compares Survivor to chess",
-"Someone complains about 'camp life' during the challenge",
-"Someone cries during a confessional",
-"Someone dramatically swears they won’t vote someone out — then does",
-"Someone dramatically vows to outlast someone specific",
-"Someone faceplants during a challenge",
-"Someone fake cries at Tribal",
-"Someone falls in a challenge",
-"Someone forgets to bring their idol",
-"Someone gets blindsided",
-"Someone gets caught in a lie",
-"Someone gets emotional about their past in a confessional",
-"Someone gives a speech about why they “deserve to win”",
-"Someone has an awkward one-on-one conversation at camp",
-"Someone hides an advantage from allies",
-"Someone loses their vote",
-"Someone makes a loyalty speech",
-"Someone makes a speech about 'deserving to be here'",
-"Someone mentions their “biggest regret” at the game",
-"Someone misreads the vote",
-"Someone plays both sides (and gets caught)",
-"Someone pretends to go for a walk but is actually idol hunting",
-"Someone refers to the game as 'beautiful' or 'broken'",
-"Someone refuses to answer a question directly at Tribal",
-"Someone reveals an idol to the tribe",
-"Someone roasts themselves in a confessional",
-"Someone says 'I didn’t come here to make friends'",
-"Someone says 'I have to play selfish now'",
-"Someone says 'I need to make a move'",
-"Someone says 'I'm calling the shots' (they're not)",
-"Someone says 'I'm going to the end with [X]' and immediately regrets it",
-"Someone says 'I'm not going home tonight' and goes home immediately after",
-"Someone says 'I'm on the bottom'",
-"Someone says 'I’m playing for my family'",
-"Someone says 'Survivor is just like life'",
-"Someone says 'This is a game for a million dollars'",
-"Someone says 'This challenge was made for me' (and loses immediately)",
-"Someone says 'trust' 5 times",
-"Someone sits out for food",
-"Someone sits out of a challenge",
-"Someone spills secret to the wrong person",
-"Someone swears they won’t be blindsided — gets blindsided",
-"Someone talks about being underestimated",
-"Someone talks about their 'underdog' status",
-"Someone tries to guilt-trip others into keeping them",
-"Survivor fan references",
-"Two players get into a heated argument"
+  "Hidden Immunity Idol found", "Hidden Idol clue found", "Secret Advantage found", 
+  "Shot in the Dark used", "Shot in the Dark hits", "Vote steal used", "Extra vote used", 
+  "Someone loses their vote", "Puzzle comeback win", "Challenge ends in a very close finish", 
+  "Challenge involves balancing something", "Sits out of a challenge", "Someone sits out for food", 
+  "Someone falls in a challenge", "Someone throws a challenge", "'Live Tribal' chaos", 
+  "Tie vote and revote", "Idol bluff works", "Last-minute scramble before Tribal", 
+  "Negotiates with Jeff at a challenge", "Someone pulls rocks", "Someone confuses the voting plan", 
+  "Tribe Swap", "Split vote strategy", "Blindside at Tribal Council", "Fake idol is played", 
+  "Fake alliance blindsides someone", "Undercover alliance is revealed", "Someone backstabs an ally", 
+  "Someone spills secret to wrong person", "Someone hides an advantage from allies", "Old alliances fall apart", 
+  "Alliance name created", "Voting blocs strategy used", "Player takes control after merge", 
+  "Someone says 'trust' 5 times", "Someone says 'I didn’t come here to make friends'", 
+  "Someone says 'I need to make a move'", "Someone compares Survivor to chess", "Someone makes a loyalty speech", 
+  "Someone fake cries at Tribal", "Emotional jury speech", "Bitter jury member moment", 
+  "Jury laughs at a player’s answer", "Winner mentions family in final tribal", "Players hug after a vote-off", 
+  "Medical evacuation", "Someone quits the game", "Club Condo mentioned", 
+  "Game-changing twist at Final 5", "Jeff says 'Come on in!'", "Jeff says 'Drop your buffs!'", 
+  "Jeff roasts someone at Tribal", "Jeff makes a pun", "'Big Move' is mentioned", 
+  "Jeff shouts ‘That’s how you do it on Survivor!’", "Someone forgets to bring their idol", "Idol is played correctly", 
+  "More than one idol played at the same Tribal", "Someone wins both immunity and reward", 
+  "Someone wins immunity by seconds", "A fake idol bluff works", "Someone gives up reward to someone else", 
+  "Someone makes a final three deal too early", "Old school player referenced", "Someone pulls off an epic blindside", 
+  "Tribe loses all their rice", "Someone misreads the vote", "Someone gets caught in a lie", 
+  "Survivor fan references", "Someone gets saved by the twist", "Spicy Jeff moment", 
+  "Alliance member flips", "Someone gets blindsided by their own alliance", "Unlikely immunity winner", 
+  "Someone wins reward for the first time", "Medical team is called to the challenge", "Emotional backstory", 
+  "Someone reveals the idol to the tribe", "A tribe gets punished for a rule violation", "Blindside with an idol play", 
+  "Player makes a risky move", "Player targets their closest ally", "Tribal Council ends in chaos", 
+"Someone gets caught eavesdropping", "Players scramble to form alliances last minute", 
+  "Someone makes a move just before merge", "Tribe is divided after a shocking vote", 
+  "A surprise twist changes the game", "Someone becomes the underdog", "Someone pulls off the ultimate strategic move",
+  "Someone swears they won't vote someone out — then does", 
+  "Someone says 'I'm in the best spot' and immediately isn't", 
+  "Someone claims 'I'm calling the shots' (they're not)", 
+  "Someone says 'I'm the swing vote'", 
+  "Someone says 'If I don't make a move now, I'll regret it'", 
+  "Player says 'I’m a huge Survivor fan' before making a rookie mistake", 
+  "Someone talks about trusting someone — immediately cuts them", 
+  "Someone swears they won't be blindsided — gets blindsided", 
+  "Someone does a weird victory dance after a challenge win", 
+  "Someone compares themselves to a previous winner", 
+  "Someone says 'Survivor is just like life'", 
+  "Someone says 'This challenge was made for me' (and loses immediately)", 
+  "Someone calls themselves a 'lone wolf'", 
+  "Player explains a plan in extreme detail — plan fails instantly", 
+  "Someone faceplants during a challenge", 
+  "Player builds something impressive at camp", 
+  "Someone makes a 'big move' and no one notices", 
+  "Someone accidentally reveals their alliance at Tribal", 
+  "A crab or animal steals food at camp", 
+  "Someone dramatically says they’re 'cursed' by Survivor", 
+  "Someone tries to flirt for an alliance and it fails", 
+  "A player says 'I'm on the bottom'"
 ];
 
 
